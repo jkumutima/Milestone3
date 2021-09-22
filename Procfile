@@ -1,1 +1,1 @@
-web: gunicorn main:appjacques
+web: gunicorn main:app
