@@ -28,7 +28,6 @@ def index():
     genius_artist_response = requests.get(genius_search_url)
     genius_artist_json_data = genius_artist_response.json()
     genius_artist_hits = genius_artist_json_data['response']['hits']
-    import pdb; pdb.set_trace()
 
     for hit in genius_artist_hits:
         cleaned_song_title = random_song['name'].replace(' (with Justin Bieber)', '')
