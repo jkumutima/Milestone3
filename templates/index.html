@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  
+<html>
+<head>
+
+<link rel="stylesheet" href="./pstyle.css" />
+
+		  
+</head>
+
+
+<body> 
+<!-- <form action="">
+    <input type="text" name="artist">
+</form> -->
+<!-- response: {{response}} -->
+<!-- <ul>
+Popularity: {{popularity}}
+{% for genre in genres %}
+    <li>{{genre}}</li>
+{% endfor %}
+</ul> -->
+<p>
+    Random song from Justin Bieber
+    <div>Song: {{random_song.name}}</div>
+    <div>
+        <img src={{image.url}} alt="album image" width={{image.width}} height={{image.height}}>
+    </div>
+    <div>Preview URL: <a href={{random_song.preview_url}}>{{random_song.preview_url}}</a></div>
+    <div>Lyrics URL: <a href={{random_song.lyrics_url}}>{{random_song.lyrics_url}}</a></div>
+</p>
+</body>
+</html>
