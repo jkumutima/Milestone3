@@ -1,5 +1,4 @@
 import flask
-import json
 import requests
 import os
 import spotipy
@@ -8,7 +7,6 @@ from flask import render_template
 from env import SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET, GENIUS_TOKEN
 from spotipy.oauth2 import SpotifyClientCredentials
 from flask_restful import Resource, Api
-from flask_cors import CORS, cross_origin
 
 
 templates_folder = os.path.abspath('./templates')
@@ -16,14 +14,11 @@ static_folder = os.path.abspath('./templates')
 
 app=flask.Flask(__name__, template_folder = templates_folder, static_folder= static_folder, static_url_path='')
 
-cors = CORS(app)
 
-api = Api(app)
 artist_id = '1uNFoZAHBGtllmzznpCI3s'
 artist_uri = 'spotify:artist:{}'.format(artist_id)
 
 @app.route('/')
-@cross_origin
 def index():
     spotify_client = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id=SPOTIPY_CLIENT_ID, client_secret=SPOTIPY_CLIENT_SECRET))
     top_five = spotify_client.artist_top_tracks(artist_uri)
@@ -43,22 +38,6 @@ def index():
     image = random_song['album']['images'][2]
 
     return render_template('index.html', random_song=random_song, image=image)
-
-@app.route('/spotify', methods=['GET'])
-def query_rsongs():
-    spotify_client = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id=SPOTIPY_CLIENT_ID, client_secret=SPOTIPY_CLIENT_SECRET))
-    top_five = spotify_client.artist_top_tracks(artist_uri)
-    
-    random_song = random.choice(top_five['tracks'])
-
-    return json.dumps(random_song)
-
-@app.route('/lyrics', methods=['GET'])
-def query_lyrics():
-    genius_search_url = "http://api.genius.com/search?q='Justin Bieber'&access_token={}".format(GENIUS_TOKEN)
-
-    return json.dumps(genius_search_url)
-
 
 if __name__ == '__main__':
     app.run()

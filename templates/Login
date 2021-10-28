@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The name Attribute</h2>
+
+<form methods="POST" action="login">
+  <label for="fname">Username name:</label><br>
+  <input type="text" id="fname" value=" "><br><br>
+  
+  <label for="fname">Pass code:</label><br>
+  <input type="text" id="fname" value=" "><br><br>
+
+  
+  
+  <input type="submit" value="Submit">
+</form> 
+</form methods = "POST" action="signup">
+<label for="nuser">New User:</label><br>
+  <input type="text" id="nuser" value=" "><br><br>
+  <input type="signup" value="signup">
+</form>
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+<p>Notice that the value of the "First name" field will not be submitted, because the input element does not have a name attribute.</p>
+
+</body>
+</html>
