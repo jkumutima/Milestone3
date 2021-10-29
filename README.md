@@ -1,1 +1,1 @@
-Note that my-app contains the codes for project milestone3. Lovelypreregpage contains the codes from project1 milestone2 and the others files were used ffor project1 milestone1.
+Note that my-app contains the codes for project1_milestone3. Lovelypreregpage contains the codes from project1_milestone2(modified to be accessed by ocdes from project milestone_3) and the others files were used ffor project1_milestone1(also modified to be accessed by milestone3 codes).
