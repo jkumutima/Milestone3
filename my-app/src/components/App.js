@@ -19,7 +19,5 @@ export default App;
 // 
 
 
-//TODO
-// Update you backend to be a restfull api 
-// handle sign up depending on the apoi response
+
 
