@@ -4,16 +4,42 @@ Brief description of the Bootstrap styling
 
 I attached the work that I have done for project Milestone 2 and milestone 3 with bootstrap applied to it. 
 
+For Milestone 2(Task1): Bootstrap is applied to the file “lovelypage” that contains the pages of milestone2. 
+
 Bootstrap contains CSS and JavaScript-based design templates for topography, forms, buttons, navigation, drop-down menus, media objects and image classes, and other interface components. The primary purpose of adding it to a web project is to apply Bootstrap's choices of color, size, font and layout to that project.  Bootstrap provisions for light colored tables, page headings, and text with a highlight.  
 
  
 
-My bootstrap contains the JavaScript-based design in the html forms (index.html, signup.html, songs.html, success.html) 
+My bootstrap contains the JavaScript-based design in the html forms (index.html, signup.html, songs.html, success.html) used in milestone2(lovelypage/templates/...) 
 
  
 
-My bootstrap contains the CSS based design 
+My bootstrap contains the CSS based design used in milestone2(lovelypage/static/css/bootstrap.min.css/) in addition to java script-based(lovelypage/static/js/bootstap.min.js/).  
 
  
 
-Bootstrap contains jQuery. 
+Bootstrap.min.css contains the CSS necessary for the Bootstrap to work correctly. Bootstrap.min.js contains javascript code necessary for running Bootstrap.  
+
+ 
+
+ 
+
+ 		All javascript components of boostrap are bundled into bootstrap.min.js 
+
+ 
+
+ 
+
+ 
+
+For Milestone 3(Task2): Bootstrap is applied to the file “my-app” that contains the pages of milestone3. 
+
+ 
+
+Imported Bootstrap as a dependency. Installed Bootstrap as a dependency: npm install bootstrap 
+
+Once the bootstrap is installed, it is then included in the app’s entry JavaScript file i.e src/index.js 
+
+Install jquery and popper.js : npm install jquery popper.js 
+
+Then, used the built-in Bootstrap classes in my React app components(built a new file called themeswitcher). 
